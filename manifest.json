@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Coursera Video Speedup",
+  "version": "1.0",
+  "description": "Speed up Coursera videos with this simple Chrome extension.",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.coursera.org/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://www.coursera.org/*"
+  ]
+}
